@@ -1,35 +1,93 @@
-# Учебный проект по автоматизации Python/Playwright/Pytest ресурса: https://aqa-proka4.org/sandbox/web
+# MyProject - UI Automation Testing with Playwright & Pytest
 
-## Проект содержит тесты различных UI элеменов: 
+Тестовый проект на Python, демонстрирующий навыки автоматизации UI-тестирования с использованием **Pytest** и **Playwright**.
+
+Тестируемый сайт: https://aqa-proka4.org/sandbox/web
+
+
+## Описание
+
+Проект для автоматизации UI-тестирования веб-приложений с использованием Page Object Model (POM). Включает тесты для различных UI-компонентов и сценариев
+
+---
+##  Структура проекта
+- `pages/` — реализация Page Object Model (POM)  
+- `tests/` — тестовые сценарии  
+- `conftest.py` — фикстуры pytest  
+- `base_page.py` — базовый класс с общими методами для UI-тестов  
+- `requirements.txt` — зависимости проекта
+
+---
+##  Используемые технологии
+- Python  
+- Pytest  
+- Playwright  
+- Page Object Model (POM)  
+
+---
+## Браузер для тестирования
+
+- Chromium (Google Chrome) - основной браузер для тестирования
+---
+
+## Установка
+
+1. Клонируйте репозиторий:
+    ```bash
+    git clone git@github.com:vsemyanovjob-wq/MyProject.git
+    cd MyProject
+    ```
+2. Установите зависимости:
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate    # Windows: .venv\Scripts\activate
+    pip install -r requirements.txt
+    ```
+
+3. Установите браузеры для Playwright:
+    ```bash
+    playwright install
+    ```
+
+
+##  Запуск тестов
+
+Запуск всех тестов:
+    ```
+    pytest --headed
+    ```
+
+Запуск тестов с отображением браузера:
+    ```
+    pytest --headed -v -s
+    ```
+
+##  Пример теста
+
+Пример UI-теста с использованием Page Object Model:
+```
+def test_tooltip_1_disappears_after_hover_out(open_main_page, hover_page):
+    hover_page.show_alert(hover_page.TOOLTIP_BTN1)
+    hover_page.check_found_text(hover_page.TOOLTIP_HINT1,'Это всплывающая подсказка!')
+    hover_page.show_alert(hover_page.TOOLTIP_BTN2)
+    hover_page.check_tooltip_disappeared(hover_page.TOOLTIP_HINT1)
+```
+
+##  Возможности проекта
+Проект включает тесты для проверки различных UI-элементов:
 - Forms
-- Table
+- Tables
 - Download files
 - Drag & Drop
-- Modal Windows
-- Frames & Iframe
+- Modal windows
+- Frames & iFrame
 - Dynamic content
 - Hover & tooltips
 
-## Структура проекта
-- `pages/` - Page Object Model
-- `tests/` - Тесты
-- `conftest.py` - Фикстуры
-- `requirements.txt` - Зависимости
--  `base_page.py` - базовый класс с общими функциями для работы с элементами (клики, проверка текста, hover и т.д.)
 
-## Как запустить
-1. Клонировать репозиторий:
-```bash
-    git clone <URL репозитория>
-   
-2. Установка зависимостей:
-    pip install -r requirements.txt
+##  Контакты
+GitHub: https://github.com/vsemyanovjob-wq
 
-3. Установить бразуеры:
-    playwright install
+Email: vsemyanovjob@gmail.com
 
-4. Запустить тесты:
-    pytest --headed -v -s
- 
-```
-
+Telegram: @StDeform
