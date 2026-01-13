@@ -24,11 +24,6 @@ class UiComponents(BasePage):
     BTN_SUBMIT = 'button[onclick="submitWizard()"]'
 
    # Локаторы для подтверждения
-    CONFIRM_FIRST_NAME = "#confirmFirstName"
-    CONFIRM_LAST_NAME = "#confirmLastName"
-    CONFIRM_EMAIL = "#confirmEmail"
-    CONFIRM_PHONE = "#confirmPhone"
-
     EXPECTED = {
         "#confirmFirstName": "Оля",
         "#confirmLastName": "Сергеева",
