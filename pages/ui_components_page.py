@@ -9,7 +9,6 @@ class UiComponents(BasePage):
         {'name': 'Appium', 'Locator': '[onclick="toggleAccordion(\'accordion4\')"]','content_locator':'#accordion4','text': 'Appium — это open-source инструмент'}
     ]
 
-
     # Локаторы Multi-step Forms / Wizard
     WIZARD_NAME = '#wizardFirstName'
     WIZARD_LAST_NAME = '#wizardLastName'
@@ -22,11 +21,14 @@ class UiComponents(BasePage):
     BTN_NEXT_PAGE_2 = 'button[onclick="nextWizardStep(3)"]'
     BTN_BACK_PAGE_3 = 'button[onclick="prevWizardStep(2)"]'
     BTN_SUBMIT = 'button[onclick="submitWizard()"]'
-
-   # Локаторы для подтверждения
     EXPECTED = {
         "#confirmFirstName": "Оля",
         "#confirmLastName": "Сергеева",
         "#confirmEmail": "test121@gmail.com",
         "#confirmPhone": "8800-555-3535"
     }
+
+    # Локаторы Shadow DOM
+    SHADOW_HOST = '#shadowHost'
+    SHADOW_BTN = '#shadowButton'
+    CLICK_COUNTER = '#shadowClickCount'

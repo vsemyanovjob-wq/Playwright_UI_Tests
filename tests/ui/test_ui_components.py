@@ -23,6 +23,11 @@ def test_successful_form_submission(open_main_page,ui_page):
     ui_page.click_on_element_btn(ui_page.BTN_SUBMIT)
     ui_page.check_found_text(ui_page.WIZARD_FORM_WITH_RESULT,'Форма успешно отправлена!')
 
+def test_click_count_increases(open_main_page,ui_page):
+    ui_page.click_on_element_btn(ui_page.SHADOW_BTN)
+    ui_page.click_on_element_btn(ui_page.SHADOW_BTN)
+    ui_page.check_found_text(ui_page.SHADOW_HOST,'2')
+
 # ==========================================
 # NEGATIVE SCENARIOS
 # ==========================================
