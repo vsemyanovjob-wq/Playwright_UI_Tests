@@ -36,6 +36,11 @@ def test_breadcrumbs_navigation_forward_finds_product(open_main_page,ui_page):
     ui_page.click_on_element_btn(ui_page.NAVIGATE_TO_ITEM_BTN)
     ui_page.check_found_text(ui_page.PAGE_CONTENT_RESULT, 'Товар: Ноутбук')
 
+def test_autocomplete_suggestions(open_main_page,ui_page):
+    ui_page.fill_input(ui_page.RELATIVE_BTN,'Pl')
+    ui_page.check_found_text(ui_page.TEXT_IN_DROPDOWN_AUTO,'Playwright')
+
+
 
 # ==========================================
 # NEGATIVE SCENARIOS

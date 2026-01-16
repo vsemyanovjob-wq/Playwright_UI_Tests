@@ -38,3 +38,7 @@ class UiComponents(BasePage):
     NAVIGATE_TO_CATEGORY_BTN = "button[onclick=\"navigateBreadcrumb('category')\"]"
     NAVIGATE_TO_ITEM_BTN = "button[onclick=\"navigateBreadcrumb('item')\"]"
     PAGE_CONTENT_RESULT = '#pageContent'
+
+    # Локаторы Autocomplete / Typeahead
+    RELATIVE_BTN = '#autocompleteInput'
+    TEXT_IN_DROPDOWN_AUTO = '#autocompleteDropdown'
